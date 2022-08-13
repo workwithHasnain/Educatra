@@ -1,0 +1,78 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard - Admin</title>
+	<script type="text/javascript">
+		function remStd() {
+ 			document.getElementById("rs").style.display='block';
+ 			document.getElementById("rsbutton").style.display='none';
+		}
+		function remFac() {
+ 			document.getElementById("rf").style.display='block';
+ 			document.getElementById("rfbutton").style.display='none';
+		}
+		function remCrs() {
+ 			document.getElementById("rc").style.display='block';
+ 			document.getElementById("rcbutton").style.display='none';
+		}
+	</script>
+</head>
+<body scrolling="no" style="overflow: hidden;">
+  
+	<img class="backg" id="top" src="res/admindash.jpg" style="z-index:-2; position: absolute; top: 0%; left: 0%; height: 100%; width: 100%;">
+	
+<a href="educatra.html"><button style="position:absolute; height: 23%; width: 10%; top: 0%; left: 89.9%; background-color: #E32227; border: none; color: white; font-size: 20px;">Logout</button></a>
+	
+	<iframe scrolling="no" src="addstd.html" style="position: absolute; top: 23%; height: 37%; width: 33%; left: 0%;"></iframe>
+	<iframe scrolling="no" src="addfac.html" style="position: absolute; top: 23%; height: 37%; width: 33%; left: 33.5%;"></iframe>
+	<iframe scrolling="no" src="addcourse.html" style="position: absolute; top: 23%; height: 37%; width: 32.5%; left: 67%;"></iframe>
+	
+	<form action="php/adminops.php" method="POST" style="position:absolute; height: 19.5%; width: 33.2%; top: 60.5%; left: 0%;">
+		<input type="submit" name="eas" value="Enlist All Students" style="height: 100%; width: 100%; color: white; font-size: 35px; background-color: blueviolet; border: none;">
+	</form>
+
+	<form action="php/adminops.php" method="POST" style="position:absolute; height: 20%; width: 16.5%; top: 80.5%; left: 0%;">
+		<input type="submit" name="msi" value="Student Help Requests" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: forestgreen; border: none;">
+	</form>
+
+	<button onclick="remStd();" id="rsbutton" style="border: none; position:absolute; height: 20%; width: 16.5%; top: 80.5%; left: 16.8%; color: white; font-size: 20px; background-color: #E32227; display:block;">Remove Student</button>
+	<form id="rs" action="php/adminops.php" method="POST" style="position: absolute; height: 20%; width: 16.5%; top: 80.5%; left: 16.8%; display:none;">
+		<label for="rsid"><b>Enter S. ID</b></label><br>
+		<input required type="text" name="rsid">
+		<input type="submit" name="rs" value="Remove Student">
+	</form>
+
+	<form action="php/adminops.php" method="POST" style=" position:absolute; height: 19.5%; width: 33.2%; top: 60.5%; left: 33.5%;">
+		<input type="submit" name="eaf" value="Enlist All Faculty" style="height: 100%; width: 100%; color: white; font-size: 35px; background-color: blueviolet; border: none;">
+	</form>
+
+	<form action="php/adminops.php" method="POST" style="position:absolute; height: 20%; width: 16.5%; top: 80.5%; left: 33.5%;">
+		<input type="submit" name="mfi" value="Faculty Help Requests" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: forestgreen; border: none;">
+	</form>
+
+	<button onclick="remFac();" id="rfbutton" style="border: none; position:absolute; height: 20%; width: 16.5%; top: 80.5%; left: 50.3%; color: white; font-size: 20px; background-color: #E32227; display:block;">Remove Faculty</button>
+	<form id="rf" action="php/adminops.php" method="POST" style="position:absolute; height: 20%; width: 16.5%; top: 80.5%; left: 50.3%; display:none;">
+		<label for="rtid"><b>Enter F. ID</b></label><br>
+		<input required type="text" name="rtid">
+		<input type="submit" name="rf" value="Remove Faculty">
+	</form>
+
+	<form action="php/adminops.php" method="POST" style="position:absolute; height: 19.5%; width: 32.8%; top: 60.5%; left: 67%;">
+		<input type="submit" name="eac" value="Enlist All Courses" style="height: 100%; width: 100%; color: white; font-size: 35px; background-color: blueviolet; border: none;">
+	</form>
+
+	<form action="php/adminops.php" method="POST" style="position:absolute; height: 20%; width: 16.5%; top: 80.5%; left: 67%;">
+		<input type="submit" name="mci" value="Parent Help Requests" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: forestgreen; border: none;">
+	</form>
+
+	<button onclick="remCrs();" id="rcbutton" style="position:absolute; height: 20%; width: 16%; top: 80.5%; left: 83.8%; color: white; font-size: 20px; background-color: #E32227; border: none; display:block;">Remove Course</button>
+
+	<form id="rc" action="php/adminops.php" method="POST" style="position:absolute; height: 20%; width: 16%; top: 80.5%; left: 83.8%; display:none;">
+		<label for="rcid"><b>Enter C. ID</b></label><br>
+		<input required type="text" name="rcid">
+		<input type="submit" name="rc" value="Delete Course">
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body style="background-color: #D6E4FF;">
+<div style="position: absolute; height: 100%; width: 100%; top: 0%; left: 0%;">
+	<img src="res/adduser.png" style="position: absolute; height: 65%; width=:65%; top: 5%; left: 25%;">
+	<a href="#addfac"><button style="position:absolute; height: 20%; width: 60%; top: 75%; left: 20%; background-color: #3366FF; border: none; color: white; box-shadow: 1px 1px 10px 1px #888888; font-size: 20px;">Register Faculty</button></a>
+</div>
+<div style="position: absolute; top: 205%;">
+	<form id="addfac" action="php/addfac.php" method="POST">
+		<label for="name" style="font-size: 20px;">Full Name:</label>
+		<input required type="text" id="name" name="name" style="font-size: 20px;"><br><br>
+
+		<label for="occu" style="font-size: 20px;">Occupation:</label>
+		<input required type="text" id="occu" name="occu" style="font-size: 20px;"><br><br>
+
+		<label for="dob" style="font-size: 20px;">Date of Birth: yyyy/mm/dd</label>
+		<input required type="text" id="dob" name="dob" style="font-size: 20px; width: 25%;"><br><br>
+		
+		<label for="phone" style="font-size: 20px;">Phone No:</label>
+		<input required type="number" id="phone" name="phone" style="font-size: 20px;"><br><br>
+		
+		<label for="email" style="font-size: 20px;">Email:</label>
+		<input required type="email" id="email" name="email" style="font-size: 20px; width: 61%;"><br><br>
+		
+		<label for="address" style="font-size: 20px;">Address:</label>
+		<input required type="text" id="address" name="address" style="font-size: 20px; width: 57%">
+		
+		<input type="submit" name="submit">
+	</form>
+</div>
+</form>
+<body>
+</html>

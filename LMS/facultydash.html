@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard - Faculty</title>
+	<script type="text/javascript">
+		function cA() {
+ 			document.getElementById("caform").style.display='block';
+ 			document.getElementById("cabutton").style.display='none';
+		}
+		function cC() {
+ 			document.getElementById("ccform").style.display='block';
+ 			document.getElementById("ccbutton").style.display='none';
+		}
+		function rA() {
+ 			document.getElementById("remaform").style.display='block';
+ 			document.getElementById("remabutton").style.display='none';
+		}
+		function eaA() {
+ 			document.getElementById("eaaform").style.display='block';
+ 			document.getElementById("eaabutton").style.display='none';
+		}
+		function eaS() {
+ 			document.getElementById("easform").style.display='block';
+ 			document.getElementById("easbutton").style.display='none';
+		}
+		function sS() {
+ 			document.getElementById("ssform").style.display='block';
+ 			document.getElementById("ssbutton").style.display='none';
+		}
+		function grade() {
+ 			document.getElementById("ugbutton").style.display='block';
+ 			document.getElementById("vgbutton").style.display='block';
+ 			document.getElementById("gbutton").style.display='none';
+		}
+		function vGrade() {
+ 			document.getElementById("vgform").style.display='block';
+ 			document.getElementById("vgbutton").style.display='none';
+		}
+	</script>
+</head>
+<body style="font-family: calibri;">
+<img class="backg" id="top" src="res/facdash.jpg" style="z-index:-2; position: absolute; top: 0%; left: 0%; height: 100%; width: 100%;">
+
+<form target="show" action="php/facultyops.php" method="POST" style="position:absolute; height: 15%; width: 10%; top: 0%; left: 68.9%; background-color: #E32227; border: none; color: white; font-size: 20px;">
+	<input type="submit" name="mp" value="My Profile" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: forestgreen; border: none;">
+</form>
+
+<a href="educatra.html"><button style="position:absolute; height: 15%; width: 10%; top: 0%; left: 89.9%; background-color: #E32227; border: none; color: white; font-size: 20px;">Logout</button></a>
+
+<form target="show" action="php/facultyops.php" method="POST" style="position:absolute; height: 15%; width: 10%; top: 0%; left: 79.4%; background-color: forestgreen; border: none; color: white; font-size: 20px;">
+	<input type="submit" name="hd" value="Help Desk" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: #5A4FCF; border: none;">
+</form>
+
+<iframe src="res/logo.html" name="show" style="position: absolute; top: 23%; height: 76%; width: 45%; left: 0%;"></iframe>
+
+<button onclick="cA();" id="cabutton" style="border: none; position:absolute; height: 40.5%; width: 27.1%; top: 23%; left: 45.5%; color: white; font-size: 35px; background-color: blueviolet; display:block;">Create Assignment</button>
+
+<form id="caform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 23%; left: 46%; display: none;">
+		<label for="title" style="font-size: 20px;"><b>Title:</b></label><br>
+		<input required type="text" name="title" style="font-size: 20px;"><br>
+		
+		<label for="marks" style="font-size: 20px;"><b>Total Marks:</b></label><br>
+		<input required type="number" name="marks" style="font-size: 20px;"><br>
+
+		<label for="ld" style="font-size: 20px;"><b>Last Date: yyyy/mm/dd</b></label><br>
+		<input required type="text" name="ld" style="font-size: 20px;"><br>
+		
+		<label for="classid" style="font-size: 20px;"><b>Class ID:</b></label><br>
+		<input required type="number" name="classid" style="font-size: 20px;"><br>
+		
+		<input type="submit" name="casubmit" value="Create" style="font-size: 20px;">
+	</form>
+
+<button onclick="eaA();" id="eaabutton" style="border: none; position:absolute; height: 17.5%; width: 13.5%; top: 64%; left: 45.5%; color: white; font-size: 20px; background-color: forestgreen; display:block;">Enlist All Assigments</button>
+
+<form id="eaaform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 64%; left: 45.5%; display: none;">
+		<label for="classid" style="font-size: 20px;"><b>Class ID:</b></label><br>
+		<input required type="number" name="classid" style="font-size: 20px; width: 50%;"><br><br>
+
+		<input type="submit" name="eaasubmit" value="Show" style="font-size: 20px;">
+</form>
+
+<button onclick="rA();" id="remabutton" style="border: none; position:absolute; height: 17.5%; width: 13.5%; top: 64%; left: 59.1%; color: white; font-size: 20px; background-color: #E32227; display:block;">Remove Assignment</button>
+
+
+<form id="remaform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 64%; left: 59.1%; display: none;">
+		<label for="assignmentid" style="font-size: 20px;"><b>Assignment ID:</b></label><br>
+		<input required type="number" name="assignmentid" style="font-size: 20px; width: 50%;"><br><br>
+
+		<input type="submit" name="remasubmit" value="Remove" style="font-size: 20px;">
+</form>
+
+<button onclick="cC();" id="ccbutton" style="border: none; position:absolute; height: 20%; width: 27.1%; top: 23%; left: 72.8%; color: white; font-size: 35px; background-color: blueviolet; display:block;">Create Class</button>
+
+
+<form id="ccform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 23%; left: 73%; display: none;">
+		<label for="cid" style="font-size: 20px;"><b>Course ID:</b></label><br>
+		<input required type="number" name="cid" style="font-size: 20px;"><br>
+		
+		<label for="password" style="font-size: 20px;"><b>Set Password:</b></label><br>
+		<input required type="password" name="password" style="font-size: 20px;"><br><br>
+
+		<input type="submit" name="ccsubmit" value="Create" style="font-size: 20px;">
+</form>
+
+<form id="eacform" target="show" action="php/facultyops.php" method="POST" style="position:absolute; height: 20%; width: 13.5%; top: 43.5%; left: 86.4%;">
+	<input type="submit" name="eac" value="Enlist All Classes" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: forestgreen; border: none;">
+</form>
+
+<button onclick="sS();" id="ssbutton" style="border: none; position:absolute; height: 20%; width: 13.5%; top: 43.5%; left: 72.8%; color: white; font-size: 20px; background-color: #89008b; display:block;">Submissions</button>
+
+<form id="ssform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 43.5%; left: 72.8%; display: none;">
+		<label for="classid" style="font-size: 20px;"><b>Class ID:</b></label><br>
+		<input required type="number" name="classid" style="font-size: 20px; width: 50%;"><br><br>
+
+		<input type="submit" name="sssubmit" value="Show" style="font-size: 20px;">
+</form>
+
+<button onclick="eaS();" id="easbutton" style="border: none; position: absolute; height: 17.5%; width: 27.1%; top: 64%; left: 72.8%; color: white; font-size: 20px; background-color: #1e5fe1; display:block;">Enlist All Students</button>
+
+<form id="easform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 64%; left: 73%; display: none;">
+		<label for="classid" style="font-size: 20px;"><b>Class ID:</b></label><br>
+		<input required type="number" name="classid" style="font-size: 20px;"><br><br>
+
+		<input type="submit" name="eassubmit" value="Show" style="font-size: 20px;">
+</form>
+
+<button onclick="vGrade();" id="vgbutton" style="border: none; position:absolute; height: 17.5%; width: 27.1%; top: 82%; left: 45.5%; color: white; font-size: 30px; background-color: #89008b; display:block;">View Grades</button>
+
+<form id="vgform" action="php/facultyops.php" method="POST" target="show" style="position: absolute; top: 82%; left: 45.5%; display: none;">
+		<label for="classid" style="font-size: 20px;"><b>Class ID:</b></label><br>
+		<input required type="number" name="classid" style="font-size: 20px;"><br><br>
+
+		<input type="submit" name="vgsubmit" value="Show" style="font-size: 20px;">
+</form>
+
+<form target="show" action="php/facultyops.php" method="POST" style="position:absolute; height: 17.5%; width: 27.1%; top: 82%; left: 72.8%;">
+	<input type="submit" name="feedb" value="Feedback Center" style="height: 100%; width: 100%; color: white; font-size: 30px; background-color: darkorange; border: none;">
+</form>
+
+
+</body>
+</html>

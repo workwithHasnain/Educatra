@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dashboard - Parent</title>
+	<script type="text/javascript">
+		function a() {
+ 			document.getElementById("aform").style.display='block';
+ 			document.getElementById("abutton").style.display='none';
+		}
+		function g() {
+ 			document.getElementById("gform").style.display='block';
+ 			document.getElementById("gbutton").style.display='none';
+		}
+		function jC() {
+ 			document.getElementById("jcform").style.display='block';
+ 			document.getElementById("jcbutton").style.display='none';
+		}
+		function fb() {
+ 			document.getElementById("fbform").style.display='block';
+ 			document.getElementById("fbbutton").style.display='none';
+		}
+	</script>
+</head>
+<body style="font-family: calibri;">
+	<img class="backg" id="top" src="res/prtdash.jpg" style="z-index:-2; position: absolute; top: 0%; left: 0%; height: 100%; width: 100%;">
+
+<form target="show" action="php/parentops.php" method="POST" style="position:absolute; height: 15%; width: 10%; top: 0%; left: 68.9%; background-color: #E32227; border: none; color: white; font-size: 20px;">
+	<input type="submit" name="mp" value="My Profile" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: forestgreen; border: none;">
+</form>
+
+<a href="educatra.html"><button style="position:absolute; height: 15%; width: 10%; top: 0%; left: 89.9%; background-color: #E32227; border: none; color: white; font-size: 20px;">Logout</button></a>
+
+<form target="show" action="php/parentops.php" method="POST" style="position:absolute; height: 15%; width: 10%; top: 0%; left: 79.4%; background-color: forestgreen; border: none; color: white; font-size: 20px;">
+	<input type="submit" name="hd" value="Help Desk" style="height: 100%; width: 100%; color: white; font-size: 20px; background-color: #5A4FCF; border: none;">
+</form>	
+
+<iframe src="res/logo.html" name="show" style="position: absolute; top: 23%; height: 76%; width: 45%; left: 0%;"></iframe>
+
+<button onclick="a();" id="abutton" style="border: none; position:absolute; height: 38.5%; width: 27.1%; top: 23%; left: 45.5%; color: white; font-size: 35px; background-color: #E32227; display:block;">Assignments</button>
+
+<form id="aform" action="php/parentops.php" method="POST" target="show" style="position: absolute; top: 23%; left: 46%; display: none;">
+		<label for="sid" style="font-size: 20px;"><b>Student ID:</b></label><br>
+		<input required type="number" name="sid" style="font-size: 20px;"><br>
+		<label for="classid" style="font-size: 20px;"><b>Class ID:</b></label><br>
+		<input required type="number" name="classid" style="font-size: 20px;"><br><br>
+		
+		<input type="submit" name="asubmit" value="Show" style="font-size: 20px;">
+</form>
+
+<form id="mcpform" target="show" action="php/parentops.php" method="POST" style="position:absolute; height: 25%; width: 27.1%; top: 49%; left: 72.8%;">
+	<input type="submit" name="mcp" value="My Child's Profile(s)" style="height: 100%; width: 100%; color: white; font-size: 25px; background-color: forestgreen; border: none;">
+</form>
+
+<button onclick="jC();" id="jcbutton" style="border: none; position:absolute; height: 25.5%; width: 27.1%; top: 23%; left: 72.8%; color: white; font-size: 30px; background-color: blueviolet; display:block;">My Child's Classes</button>
+
+
+<form id="jcform" action="php/parentops.php" method="POST" target="show" style="position: absolute; top: 23%; left: 73%; display: none;">
+		<label for="sid" style="font-size: 20px;"><b>Student ID:</b></label><br>
+		<input required type="number" name="sid" style="font-size: 20px;"><br><br>
+
+		<input type="submit" name="mcc" value="Show" style="font-size: 20px;">
+</form>
+
+<button onclick="g();" id="gbutton" style="border: none; position:absolute; height: 38%; width: 27.1%; top: 62%; left: 45.5%; color: white; font-size: 35px; background-color: #E32227; display:block;">Grades</button>
+
+<form id="gform" action="php/parentops.php" method="POST" target="show" style="position: absolute; top: 62%; left: 46%; display: none;">
+		<label for="sid" style="font-size: 20px;"><b>Student ID:</b></label><br>
+		<input required type="number" name="sid" style="font-size: 20px;"><br><br>
+		
+		<input type="submit" name="gsubmit" value="Show" style="font-size: 20px;">
+</form>
+
+<button onclick="fb();" id="fbbutton" style="border: none; position:absolute; height: 25%; width: 27.1%; top: 74.5%; left: 72.8%; color: white; font-size: 30px; background-color: darkorange; display:block;">Check Feedbacks</button>
+
+<form id="fbform" action="php/parentops.php" method="POST" target="show" style="position: absolute; top: 75%; left: 73%; display: none;">
+		<label for="sid" style="font-size: 20px;"><b>Student ID:</b></label><br>
+		<input required type="number" name="sid" style="font-size: 20px;"><br><br>
+
+		<input type="submit" name="feedb" value="Show" style="font-size: 20px;">
+</form>
+
+</body>
+</html>
