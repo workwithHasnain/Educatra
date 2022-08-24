@@ -76,7 +76,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['asubmit'])) {
 	$rowOne = mysqli_fetch_array($resultOne, MYSQLI_ASSOC);  
 	$countOne = mysqli_num_rows($resultOne);
 	if($countOne == 1){  
-	   $sql = "SELECT assignmentid as aid, title, (select name from course where cid = (select cid from class where classid=$classid)) as course, dateassigned,lastdate,(select link from studentassignment where assignmentid=aid) as sub,(select datesub from studentassignment where assignmentid=assignment.assignmentid and sid =(select sid from student where phone = $phone)) as subdate,(select marks from studentassignment where sid = (select sid from student where phone = $phone)and assignmentid=assignment.assignmentid) as marks,(select totalmarks from assignment where assignmentid=aid) as totalm from assignment where classid = $classid order by aid ASC";
+	   $sql = "SELECT assignmentid as aid, title, (select name from course where cid = (select cid from class where classid=$classid)) as course, dateassigned,lastdate,(select link from studentassignment where assignmentid=aid and sid = (select sid from student where phone = $phone)) as sub,(select datesub from studentassignment where assignmentid=assignment.assignmentid and sid =(select sid from student where phone = $phone)) as subdate,(select marks from studentassignment where sid = (select sid from student where phone = $phone)and assignmentid=assignment.assignmentid) as marks,(select totalmarks from assignment where assignmentid=aid) as totalm from assignment where classid = $classid order by aid ASC";
 		$result = $mysqli->query($sql);
 		$mysqli->close();
 		$checkone = 1;  
